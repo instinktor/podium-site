@@ -1,0 +1,83 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	background-color: #000
+	font-size: 14px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+.hamburger
+	right: 0
+	position: absolute
+
+.fullscreen-bg video
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	overflow: hidden
+	width: 100%
+	z-index: -100
+	&:after
+		position: absolute
+		left: 0
+		top: 0
+		background-color: rgba(0,0,0,0.2)
+		z-index: 100
+video
+	display: inline-block;
+	vertical-align: baseline;
+
+.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before 
+	background-color: #fff
+
+.img_logo
+	filter: invert(100%)
+	margin-top: 20%
+	margin-left: 10%
+	
+.phone
+	color: #ffffff
+	font-weight: lighter
+	font-size: 1.5em
+	margin-left: 40px
+	margin-top: 15px
+	float: left
+	display: block
+	position: absolute
+
+@import "media" // Always at the end
